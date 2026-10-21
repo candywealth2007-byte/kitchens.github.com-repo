@@ -1,0 +1,978 @@
+
+.root {
+      --brand: rgb(137.3077 33.6668 33.6668);
+      --brand-title: #892222;
+      --green: rgb(56.4414 205.9615 94.0756);
+      --nav-surface: rgb(235.473 236.6106 235.7594);
+      --info-surface: rgb(255 247.6442 247.6442);
+      --card-surface: rgb(240.2885 240.2885 240.2885);
+      --sans: "Inter", sans-serif;
+      --serif: "Jomolhari", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: white;
+      color: black;
+      font-family: var(--serif);
+    }
+
+    a {
+      color: #892222;
+      text-decoration: none;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--brand);
+      outline-offset: 5px;
+    }
+
+    h1, h2, p {
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .landing-page {
+      position: relative;
+      width: 1440px;
+      min-height: 1024px;
+      margin-inline: auto;
+    }
+
+    .header {
+      position: absolute;
+      left: 22px;
+      top: 24px;
+      width: 1396px;
+      height: 187px;
+      display: flex;
+      align-items: center;
+    }
+
+    .brand {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 587px;
+      height: 187px;
+      flex-shrink: 0;
+    }
+
+    .logo {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      width: 170px;
+      height: 167px;
+      border-radius: 50%;
+    }
+
+    .brand-name {
+      position: absolute;
+      left: 186px;
+      top: 64.5px;
+      white-space: nowrap;
+      font: 700 48px/58px var(--sans);
+      color: var(--brand-title);
+    }
+
+    .navigation {
+      margin-left: 100px;
+      width: 675px;
+      height: 49px;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      background: #EBEDEC;;
+      color: var(--brand);
+      font: 700 24px/29px var(--sans);
+    }
+
+    .navigation a {
+      display: block;
+      padding: 10px;
+      white-space: nowrap;
+    }
+
+    .navigation a:nth-child(1) { width: 89px; }
+    .navigation a:nth-child(2) { width: 87px; }
+    .navigation a:nth-child(3) { width: 135px; }
+    .navigation a:nth-child(4) { width: 115px; }
+    .navigation a:nth-child(5) { width: 177px; }
+
+    .hero {
+      position: absolute;
+      left: 34.5px;
+      top: 231px;
+      width: 1371px;
+      height: 418px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .hero-copy {
+      width: 587px;
+      height: 315px;
+      flex-shrink: 0;
+    }
+
+    h1 {
+      margin-left: 7px;
+      font: 400 48px/77px var(--serif);
+      white-space: nowrap;
+    }
+
+    h1 span {
+      display: block;
+    }
+
+    h1 span:first-child {
+      height: 97px;
+      padding-top: 10px;
+      padding-left: 10px;
+    }
+
+    h1 span:last-child {
+      height: 77px;
+    }
+
+    .hero-copy p {
+      margin-top: 25px;
+      margin-left: 20px;
+      width: 547px;
+      font: 400 20px/32px var(--serif);
+    }
+
+    .hero-image {
+      display: block;
+      width: 766px;
+      height: 418px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .actions {
+      position: absolute;
+      left: 47px;
+      top: 669px;
+      display: flex;
+      gap: 33px;
+      height: 52px;
+    }
+
+    .button {
+      position: relative;
+      display: block;
+      height: 52px;
+      border-radius: 9px;
+      color: white;
+      font: 500 16px/19px var(--sans);
+    }
+
+    .button-menu {
+      width: 150px;
+      padding: 17px 0 0 21px;
+      background: var(--green);
+     
+    }
+
+    .button-location {
+      width: 154px;
+      background: var(--brand);
+    }
+
+    .button-location span {
+      position: absolute;
+      left: 24px;
+      top: 15px;
+    }
+
+    .button-location svg {
+      position: absolute;
+      left: 107px;
+      top: 13px;
+      width: 24px;
+      height: 23px;
+      transform: rotate(-90deg);
+    }
+
+    .information {
+      position: absolute;
+      left: 47px;
+      top: 800px;
+      width: 1346px;
+      height: 46px;
+      background: var(--info-surface);
+      display: flex;
+      align-items: center;
+      gap: 575px;
+    }
+
+    .information p {
+      font: 400 12px/19px var(--serif);
+      white-space: nowrap;
+    }
+
+    .location,
+    .hours {
+      display: flex;
+      align-items: center;
+      width: 381px;
+      flex-shrink: 0;
+    }
+
+    .location > svg {
+      display: block;
+      flex-shrink: 0;
+      width: 38.5px;
+      height: 37.667px;
+    }
+
+    .clock-wrap {
+      width: 50px;
+      height: 46px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .clock-wrap svg {
+      width: 35.333px;
+      height: 35.333px;
+    }
+
+    .popular-dishes {
+      position: absolute;
+      left: 43px;
+      top: 866px;
+      width: 1354px;
+      height: 121px;
+      text-align: center;
+      background: var(--card-surface);
+    }
+
+    .eyebrow {
+      height: 19px;
+      color: var(--brand);
+      font: 700 16px/19px var(--sans);
+    }
+
+    .popular-dishes h2 {
+      height: 58px;
+      font: 400 36px/58px var(--serif);
+    }
+
+    .dishes-description {
+      font: 400 14px/22px var(--serif);
+    }
+
+    @media (max-width: 1439px) {
+      .landing-page {
+        width: 100%;
+        min-height: 100vh;
+        padding: 24px;
+      }
+
+      .header,
+      .hero,
+      .actions,
+      .information,
+      .popular-dishes {
+        position: static;
+        width: 100%;
+      }
+
+      .header {
+        height: auto;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        width: 43%;
+      }
+
+      .brand-name {
+        font-size: clamp(20px, 3.3vw, 48px);
+        left: 180px;
+      }
+
+      .navigation {
+        width: auto;
+        margin: 0;
+        gap: 6px;
+        font-size: 18px;
+      }
+
+      .navigation a:nth-child(n) {
+        width: auto;
+      }
+
+      .hero {
+        margin-top: 20px;
+        height: auto;
+        gap: 18px;
+      }
+
+      .hero-copy {
+        width: 43%;
+        height: auto;
+      }
+
+      h1 {
+        font-size: clamp(24px, 3.3vw, 48px);
+        line-height: 1.6;
+      }
+
+      h1 span:first-child,
+      h1 span:last-child {
+        height: auto;
+        padding: 0;
+      }
+
+      .hero-copy p {
+        width: auto;
+        margin: 20px 0 0 7px;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .desktop-break {
+        display: none;
+      }
+
+      .hero-image {
+        width: calc(57% - 18px);
+        height: auto;
+        aspect-ratio: 766 / 418;
+      }
+
+      .actions {
+        margin-top: 20px;
+      }
+
+      .information {
+        margin-top: 79px;
+        gap: 20px;
+        justify-content: space-between;
+      }
+
+      .popular-dishes {
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 950px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .brand {
+        width: 100%;
+        height: 140px;
+      }
+
+      .logo {
+        width: 120px;
+        height: 118px;
+        top: 10px;
+        left: 0;
+      }
+
+      .brand-name {
+        left: 132px;
+        top: 45px;
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      .navigation {
+        height: auto;
+        flex-wrap: wrap;
+        font-size: 16px;
+      }
+
+      .hero {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 32px;
+      }
+
+      .hero-copy {
+        width: 100%;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 36px;
+        white-space: normal;
+        line-height: 1.6;
+      }
+
+      .hero-copy p {
+        margin-left: 0;
+      }
+
+      .hero-image {
+        width: 100%;
+        margin-top: 16px;
+      }
+
+      .information {
+        margin-top: 48px;
+        height: auto;
+        padding: 12px 0;
+        flex-wrap: wrap;
+      }
+
+      .information p {
+        white-space: normal;
+      }
+
+      .location,
+      .hours {
+        max-width: 100%;
+      }
+
+      .popular-dishes {
+        height: auto;
+        min-height: 121px;
+        padding: 12px;
+      }
+
+      .popular-dishes h2 {
+        height: auto;
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .landing-page {
+        padding: 16px;
+      }
+
+      .brand-name {
+        font-size: 23px;
+      }
+
+      h1 {
+        font-size: 29px;
+      }
+	  
+    }
+	
+	.actions {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+}
+
+.button {
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+  height: 52px;
+  border: none;
+  border-radius: 9px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Green button: 150 × 52px */
+.button-menu {
+  width: 150px;
+  padding: 17px 0 0 21px;
+  background-color: rgb(56.4414 205.9615 94.0756);
+ 
+}
+
+/* Red button: 154 × 52px */
+.button-location {
+  width: 154px;
+  padding: 0;
+  background-color: rgb(137.3077 33.6668 33.6668);
+}
+
+.button-location span {
+  position: absolute;
+  left: 24px;
+  top: 15px;
+}
+
+/* Supports either an SVG or an image arrow */
+.button-location svg,
+.button-location img {
+  position: absolute;
+  left: 107px;
+  top: 13px;
+  width: 24px;
+  height: 23px;
+  transform: rotate(-90deg);
+}
+
+.button:focus-visible {
+  outline: 3px solid #892222;
+  outline-offset: 4px;
+}
+
+.information {
+  display: flex;
+  align-items: center;
+  gap: 575px;
+
+  width: 1346px;
+  height: 46px;
+  padding: 0;
+
+  background-color: rgb(255 247.6442 247.6442);
+  color: #000;
+  box-sizing: border-box;
+}
+
+.information p {
+  margin: 0;
+  font-family: "Jomolhari", serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+/* Location block */
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0;
+
+  width: 381px;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+.location > img,
+.location > svg {
+  display: block;
+  width: 38.5px;
+  height: 37.667px;
+  flex-shrink: 0;
+}
+
+.location > div {
+  display: flex;
+  flex-direction: column;
+  width: 342.5px;
+}
+
+/* Opening-hours block */
+.hours {
+  display: flex;
+  align-items: center;
+  gap: 0;
+
+  width: 381px;
+  height: 46px;
+  flex-shrink: 0;
+}
+
+.clock-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 46px;
+  flex-shrink: 0;
+}
+
+.clock-wrap img,
+.clock-wrap svg {
+  display: block;
+  width: 35.333px;
+  height: 35.333px;
+}
+
+.hours > div:last-child {
+  display: flex;
+  flex-direction: column;
+  width: 331px;
+}
+
+/* Reflow on smaller screens */
+@media (max-width: 1439px) {
+  .information {
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 800px) {
+  .information {
+    height: auto;
+    padding: 12px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .location,
+  .hours {
+    width: 100%;
+    height: auto;
+  }
+
+  .location > div,
+  .hours > div:last-child {
+    width: auto;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .information p {
+    white-space: normal;
+  }
+}
+
+.popular-dishes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+
+  width: 1354px;
+  height: 121px;
+  padding: 0;
+  box-sizing: border-box;
+
+  background-color: rgb(240.2885 240.2885 240.2885);
+  color: #000;
+  text-align: center;
+}
+
+/* Small red heading */
+.popular-dishes .eyebrow {
+  margin: 0;
+  height: 19px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0;
+
+  color: rgb(137.3077 33.6668 33.6668);
+}
+
+/* Main heading */
+.popular-dishes h2 {
+  margin: 0;
+  height: 58px;
+
+  font-family: "Jomolhari", serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: 0;
+}
+
+/* Two-line description */
+.popular-dishes .dishes-description {
+  width: 555px;
+  height: 44px;
+  margin: 0;
+
+  font-family: "Jomolhari", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+
+/* Responsive layout */
+@media (max-width: 1439px) {
+  .popular-dishes {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .popular-dishes {
+    height: auto;
+    min-height: 121px;
+    padding: 12px;
+  }
+
+  .popular-dishes .eyebrow {
+    height: auto;
+  }
+
+  .popular-dishes h2 {
+    height: auto;
+    font-size: 30px;
+    line-height: 48px;
+  }
+
+  .popular-dishes .dishes-description {
+    width: 100%;
+    max-width: 555px;
+    height: auto;
+  }
+
+  .popular-dishes .desktop-break {
+    display: none;
+  }
+}
+
+.landing-page {
+  background-color: #FCFCFC;
+}
+
+.brand img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.brand h1 {
+    font-size: 25px;
+    color: #982525;
+    font-weight: bold;
+    
+}
+
+/* Navigation menu */
+.navigation {
+    display: flex;
+    align-items: center;
+    background-color: #eeeeee;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #9d1717;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 11px;
+}
+
+.navigation a:hover {
+    background-color: #dddddd;
+}
+
+/* Contact section */
+.contact-section {
+    padding-top: 12px;
+}
+
+/* Contact heading */
+.contact-heading {
+    text-align: center;
+    color: #982525;
+}
+
+.contact-heading h2 {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-heading p {
+    font-size: 17px;
+}
+
+/* Form and details side by side */
+.contact-content {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    column-gap: 250px;
+    max-width: 900px;
+    margin: 7px auto 0;
+}
+
+/* Contact form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 250px;
+    border: none;
+    outline: none;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    padding: 9px 15px;
+    font-family: inherit;
+    font-size: 13px;
+    color: #333333;
+}
+
+.contact-form input {
+    height: 31px;
+}
+
+.contact-form textarea {
+    height: 80px;
+    resize: none;
+    padding-top: 9px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #777777;
+    opacity: 1;
+}
+
+/* Submit button */
+.contact-form button {
+    background-color: #a85252;
+    color: #ffffff;
+    border: none;
+    padding: 6px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -8px;
+}
+
+.contact-form button:hover {
+    background-color: #8e3e3e;
+}
+
+/* Contact details */
+.contact-details {
+    padding-top: 1px;
+    
+}
+
+.contact-details h3 {
+    color: #982525;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.contact-details a {
+    color: #a01818;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.contact-icon {
+    display: inline-block;
+    color: #111111;
+    font-size: 27px;
+    width: 27px;
+    text-align: center;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Jomolhari&display=swap");
+
+.location-hours,
+.location-hours * {
+  box-sizing: border-box;
+}
+
+.location-hours {
+  display: flex;
+  align-items: center;
+  gap: 510px;
+
+  width: 1337px;
+  height: 65px;
+  margin: 0;
+  padding: 0;
+
+  background-color: rgb(100% 97.115% 97.115%);
+  color: #000;
+  font-family: "Jomolhari", serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.location-hours__item {
+  display: flex;
+  align-items: center;
+  flex: 0 0 250px;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+}
+
+.location-hours__icon {
+  display: block;
+  flex-shrink: 0;
+  color: #000;
+}
+
+/* Location icon area, including its internal spacing. */
+.location-hours__item:first-child .location-hours__icon {
+  width: 38.5px;
+  height: 37.6667px;
+  padding: 3px 5px;
+}
+
+/* Opening-hours icon area. */
+.location-hours__item:last-child .location-hours__icon {
+  width: 50px;
+  height: 46px;
+  padding: 3px 5px;
+}
+
+.location-hours__text {
+  display: flex;
+  flex-direction: column;
+  height: 38px;
+  margin: 0;
+  padding: 0;
+}
+
+.location-hours__item:first-child .location-hours__text {
+  width: 250px;
+}
+
+.location-hours__item:last-child .location-hours__text {
+  width: 250px;
+}
+
+.location-hours__label,
+.location-hours__value {
+  height: 19px;
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+  text-align: left;
+  white-space: nowrap;
+}
+
